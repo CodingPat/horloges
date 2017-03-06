@@ -1,4 +1,4 @@
-  import urllib.request
+import urllib.request
 import re
 
 
@@ -43,18 +43,20 @@ base_url="http://www.ranfft.de"
 text=my_engine.get_source("http://www.ranfft.de/cgi-bin/bidfun-db.cgi?10&ranfft&0&2uswk")
 urls=my_engine.find_url(text,base_url)
 
-#for url in urls:
+for url in urls:
+  print(url)
+
+#####debug : test only 10 first urls  
+#for i in range(2):
+#  url=urls[i]
 #  try:
 #    print(url)
 #    text=my_engine.get_source(url)
-#    #print(text)
+#    print(text)
 #    images=my_engine.find_images(text)
 #    print(images)
 #    #break#debug = check only first valid url
 #  except:
 #    print("error handling url")
-  
-#debug : test only 10 first urls  
-
   
   
